@@ -15,21 +15,21 @@ form.addEventListener("submit",()=>{
 promise1=new Promise((resolve,reject)=>{
       setTimeout(()=>{
 		  resolve("Welcome,You can vote."); 
-	  },40000)
+	  },4000)
 		  
 	});
 
 promise2=new Promise((resolve,reject)=>{
       setTimeout(()=>{
 		  resolve("Oh sorry.You aren't old enough"); 
-	  },40000)
+	  },4000)
 		  
 	});
 
 if(age>18)
 {
 	promise1.then((data1)=>{
-	console.log(data1)
+	alert("Welcome,You can vote.");
 });
 	
 }
@@ -37,7 +37,7 @@ if(age>18)
 else 
 {
   promise2.then((data2)=>{
-	console.log(data2)
+	alert("Oh sorry.You aren't old enough")
 });
 	
 }
